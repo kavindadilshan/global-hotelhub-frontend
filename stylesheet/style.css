@@ -32,6 +32,14 @@ a:hover {
 }
 :hover {
 }
+
+.slide-img{
+	width: 100% !important;
+	height: 400px!important;
+}
+.carousel-caption p{
+	color: white;
+}
 small {
 	font-size: 85%;
 	font-weight: normal;
@@ -6668,6 +6676,7 @@ button.button.continue:before {
 	overflow: hidden;
 	padding: 0px;
 	justify-content: center;
+
 }
 .col2-set h2 {
 	font-size: 16px;
@@ -10769,6 +10778,11 @@ button.button.new-address:before {
     border-color: #f5f5f5 #eee #d5d5d5 #eee;
     box-shadow: 0 5px 0 rgba(200,200,200,.2);
     margin-top: 30px;
+	background-image: url("../images/hotel-image-bg.png");
+	border-radius: 20px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
 
 }
 .account-login .page-title h1, .account-login .page-title h2 {
@@ -13398,7 +13412,7 @@ select#shipping-address-select {
     border-bottom: none;
     text-align: center;
     background-repeat: no-repeat;
-    background-image: url(../images/category-bg.jpg);
+    background-image: url(../images/category-bg.png);
 	background-position:bottom
 }
 
