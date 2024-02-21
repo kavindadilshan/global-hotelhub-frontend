@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Global Hotel Hub User Register Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Default Description">
+  <meta name="keywords" content="fashion, store, E-commerce">
+  <meta name="robots" content="*">
+  <link rel="icon" href="#" type="image/x-icon">
+  <link rel="shortcut icon" href="#" type="image/x-icon">
+
+  <!-- CSS Style -->
+  <link rel="stylesheet" type="text/css" href="stylesheet/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="stylesheet/font-awesome.css" media="all">
+  <link rel="stylesheet" type="text/css" href="stylesheet/bootstrap-select.css">
+  <link rel="stylesheet" type="text/css" href="stylesheet/revslider.css" >
+  <link rel="stylesheet" type="text/css" href="stylesheet/owl.carousel.css">
+  <link rel="stylesheet" type="text/css" href="stylesheet/owl.theme.css">
+  <link rel="stylesheet" type="text/css" href="stylesheet/jquery.bxslider.css">
+  <link rel="stylesheet" type="text/css" href="stylesheet/jquery.mobile-menu.css">
+  <link rel="stylesheet" type="text/css" href="stylesheet/style.css" media="all">
+  <link rel="stylesheet" type="text/css" href="stylesheet/responsive.css" media="all">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700,800' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Teko:300,400,500,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Saira+Condensed:300,400,500,600,700,800" rel="stylesheet">
+
+  <script src="controller/constant.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+  <script src="controller/usercontroller.js"></script>
+
+  <!--    ......................sweet alert........................................-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+</head>
+<body>
+<div id="page">
+  <header>
+    <div class="container">
+      <div class="row">
+        <div id="header">
+          <div class="header-container">
+            <div class="header-logo"> <a href="index-2.html" title="Car HTML" class="logo">
+              <div><img src="images/logo.png" alt="Car Store"></div>
+            </a> </div>
+            <div class="header__nav">
+              <div class="header-banner">
+                <div class="col-lg-6 col-xs-12 col-sm-6 col-md-6">
+                  <div class="assetBlock">
+                    <div style="height: 20px; overflow: hidden;" id="slideshow">
+                      <p style="display: block;">Hot days! - <span>50%</span> Get ready for
+                        summer! </p>
+                      <p style="display: none;">Save up to <span>40%</span> Hurry limited offer!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-lg-6 col-xs-12 col-sm-6 col-md-6 call-us"><i
+                        class="fa fa-clock-o"></i> <span id="current-date"></span>  <span
+                        id="current-time"></span>
+                </div>
+              </div>
+            </div>
+
+            <!--row-->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="page-heading">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="page-title">
+            <h2>Create an Account</h2>
+          </div>
+        </div>
+        <!--col-xs-12-->
+      </div>
+      <!--row-->
+    </div>
+    <!--container-->
+  </div>
+
+
+  <!-- BEGIN Main Container -->
+
+  <div class="main-container col1-layout wow bounceInUp animated animated" style="visibility: visible;">
+
+    <div class="main">
+      <div class="account-login container">
+        <!--page-title-->
+
+          <input name="form_key" type="hidden" value="EPYwQxF6xoWcjLUr">
+          <fieldset class="col2-set">
+            <div class="col-1 new-users">
+              <strong>Registered Users
+                </strong>
+              <div class="content">
+
+                <p>If you have an account with us, please log in.</p>
+                <div class="buttons-set">
+                  <button type="button" title="Create an Account" class="button create-account" id="loginButton"><span><span>LOGIN</span></span></button>
+                </div>
+              </div>
+            </div>
+            <div class="col-2 registered-users">
+              <strong>New Users</strong>
+              <div class="content">
+
+                <p>By creating an account with our store, you will be able to move through the checkout process faster.</p>
+                <ul class="form-list">
+                  <li>
+                    <label for="fullname">Full Name<em class="required">*</em></label>
+                    <div class="input-box">
+                      <input type="text" name="login[fullname]" value="" id="fullname" class="input-text required-entry" title="Full Name">
+                    </div>
+
+                  <li>
+                    <label for="contactnumber">Contact Number<em class="required">*</em></label>
+                    <div class="input-box">
+                      <input type="text" name="login[contactnumber]" value="" id="contactnumber" class="input-text required-entry" title="Contact Number">
+                    </div>
+                  </li>
+                  <li>
+                    <label for="email">Email Address<em class="required">*</em></label>
+                    <div class="input-box">
+                      <input type="text" name="login[username]" value="" id="email" class="input-text required-entry validate-email" title="Email Address">
+                    </div>
+                  </li>
+                  <li>
+                    <label for="password">Password<em class="required">*</em></label>
+                    <div class="input-box">
+                      <input type="password" name="login[password]" class="input-text required-entry validate-password" id="password" title="Password">
+                    </div>
+                  </li>
+                </ul>
+                <div class="remember-me-popup">
+                  <div class="remember-me-popup-head" style="display:none">
+                    <h3 id="text2">What's this?</h3>
+                    <a href="#" class="remember-me-popup-close" onClick="showDiv()" title="Close">Close</a>
+                  </div>
+                  <div class="remember-me-popup-body" style="display:none">
+                    <p id="text1">Checking "Remember Me" will let you access your shopping cart on this computer when you are logged out</p>
+                    <div class="remember-me-popup-close-button a-right">
+                      <a href="#" class="remember-me-popup-close button" title="Close" onClick="
+            showDiv()"><span>Close</span></a>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="required">* Required Fields</p>
+
+
+
+                <div class="buttons-set">
+
+                  <button type="submit" onclick="registerNewUser()" class="button login" title="Register" name="send" id="send2"><span>Create an Account</span></button>
+
+                </div> <!--buttons-set-->
+              </div> <!--content-->
+            </div> <!--col-2 registered-users-->
+          </fieldset> <!--col2-set-->
+
+      </div> <!--account-login-->
+
+    </div><!--main-container-->
+
+  </div> <!--col1-layout-->
+
+
+
+
+
+  <!-- For version 1,2,3,4,6 -->
+
+  <footer>
+    <!-- BEGIN INFORMATIVE FOOTER -->
+    <div class="footer-inner">
+      <div class="our-features-box wow bounceInUp animated animated">
+        <div class="container">
+          <ul>
+            <li>
+              <div class="feature-box">
+                <div class="icon-truck"><img src="images/world-icon.png" alt="Image"></div>
+                <div class="content">
+                  <h6>World's #1</h6>
+                  <p>Largest Hotel Hub</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="feature-box">
+                <div class="icon-money"><img src="images/tag-icon.png" alt="Image"></div>
+                <div class="content">
+                  <h6>Offers</h6>
+                  <p>Stay updated pay less</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="feature-box">
+                <div class="icon-support"><img src="images/car-sold-icon.png" alt="Image"></div>
+                <div class="content">
+                  <h6>Car Sold</h6>
+                  <p>Every 4 minute</p>
+                </div>
+              </div>
+            </li>
+            <li class="last">
+              <div class="feature-box">
+                <div class="icon-return"><img src="images/compare-icon.png" alt="Image"></div>
+                <div class="content">
+                  <h6>Compare</h6>
+                  <p>Decode the right hotel</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+
+      <!--container-->
+    </div>
+    <!--footer-inner-->
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-logo"><img src="images/footer-logo.png" alt="Car Store"></div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-4">
+            <div class="social">
+              <ul>
+                <li class="fb"><a href="#"></a></li>
+                <li class="tw"><a href="#"></a></li>
+                <li class="googleplus"><a href="#"></a></li>
+                <li class="rss"><a href="#"></a></li>
+                <li class="pintrest"><a href="#"></a></li>
+                <li class="linkedin"><a href="#"></a></li>
+                <li class="youtube"><a href="#"></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-4 col-xs-12 coppyright"><a target="_blank" href="#">Global Hotel Hub © 2024 All Rights Reserved
+          </a></div>
+          <div class="col-xs-12 col-sm-4">
+            <div class="payment-accept">
+              <img src="images/payment-1.png" alt="">
+<!--              <img src="images/payment-2.png" alt=""> <img src="images/payment-3.png" alt=""> <img src="images/payment-4.png" alt="">-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- BEGIN SIMPLE FOOTER -->
+  </footer>
+  <!-- End For version 1,2,3,4,6 -->
+
+</div>
+<!--page-->
+<!-- Mobile Menu-->
+<div id="mobile-menu">
+
+</div>
+<script type="text/javascript">
+  document.getElementById("loginButton").onclick = function () {
+    location.href = "login.html";
+  };
+</script>
+
+<script>
+  function updateCurrentTime() {
+    const currentTimeElement = document.getElementById('current-time');
+    const currentDateElement = document.getElementById('current-date');
+    const currentDate = new Date();
+
+    const formattedDate = `${currentDate.getFullYear()}-${(currentDate.getMonth() + 1).toString().padStart(2, '0')}-${currentDate.getDate().toString().padStart(2, '0')}`;
+
+    const hours = currentDate.getHours().toString().padStart(2, '0');
+    const minutes = currentDate.getMinutes().toString().padStart(2, '0');
+    const seconds = currentDate.getSeconds().toString().padStart(2, '0');
+
+    const formattedTime = `${hours}:${minutes}:${seconds}`;
+    currentTimeElement.textContent = formattedTime;
+
+    currentDateElement.textContent = formattedDate;
+  }
+
+  // Update the current time every second
+  setInterval(updateCurrentTime, 1000);
+
+  // Initial update
+  updateCurrentTime();
+</script>
+
+
+<!-- JavaScript -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/parallax.js"></script>
+<script type="text/javascript" src="js/revslider.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-menu.min.js"></script>
+
+
+</body>
+
+</html>
