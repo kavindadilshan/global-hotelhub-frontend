@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Global Hotel Hub | User History</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Default Description">
+    <meta name="keywords" content="fashion, store, E-commerce">
+    <meta name="robots" content="*">
+    <link rel="icon" href="#" type="image/x-icon">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+
+    <!-- CSS Style -->
+    <link rel="stylesheet" type="text/css" href="stylesheet/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/font-awesome.css" media="all">
+    <link rel="stylesheet" type="text/css" href="stylesheet/bootstrap-select.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/revslider.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/owl.theme.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/jquery.bxslider.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/jquery.mobile-menu.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/style.css" media="all">
+    <link rel="stylesheet" type="text/css" href="stylesheet/responsive.css" media="all">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700,800'
+          rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Teko:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Saira+Condensed:300,400,500,600,700,800" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="controller/usercontroller.js"></script>
+    <script src="controller/constant.js"></script>
+
+    <!--    ......................sweet alert........................................-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+
+    <script>
+        window.onload = function () {
+            checktimout();
+        }
+    </script>
+
+</head>
+<body>
+<div id="page">
+    <header>
+        <div class="container">
+            <div class="row">
+                <div id="header">
+                    <div class="header-container">
+                        <div class="header-logo"><a href="index.html" title="Car HTML" class="logo">
+                            <div><img src="images/logo.png" alt="Car Store"></div>
+                        </a></div>
+                        <div class="header__nav">
+                            <div class="header-banner">
+                                <div class="col-lg-6 col-xs-12 col-sm-6 col-md-6">
+                                    <div class="assetBlock">
+                                        <div style="height: 20px; overflow: hidden;" id="slideshow">
+                                            <p style="display: block;">Hot days! - <span>50%</span> Get ready for
+                                                summer! </p>
+                                            <p style="display: none;">Save up to <span>40%</span> Hurry limited offer!
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-lg-6 col-xs-12 col-sm-6 col-md-6 call-us"><i
+                                        class="fa fa-clock-o"></i> <span id="current-date"></span>  <span
+                                        id="current-time"></span>
+                                </div>
+                            </div>
+
+                            <div class="fl-nav-menu">
+                                <nav>
+                                    <div class="mm-toggle-wrap">
+                                        <div class="mm-toggle"><i class="fa fa-bars"></i><span
+                                                class="mm-label">Menu</span></div>
+                                    </div>
+                                    <div class="nav-inner">
+                                        <!-- BEGIN NAV -->
+                                        <ul id="nav" class="hidden-xs">
+                                            <li class="active"><a class="level-top" href="index.html"><span>Home</span></a>
+                                            </li>
+                                            <li class="active"><a class="level-top"
+                                                                  href="profile.html"><span>Profile</span></a>
+                                            </li>
+                                            <li class="active"><a class="level-top" href="history.html"><span>History</span></a>
+                                            </li>
+
+                                            <li class="mega-menu hidden-sm"><a class="level-top"
+                                                                               href="compare.html"><span>Compare Cars‎</span></a>
+                                            </li>
+                                            <li class="active"><a class="level-top" style="cursor: pointer"
+                                                                  onclick="logout()"><span>Logout</span></a>
+                                            </li>
+                                        </ul>
+                                        <!--nav-->
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+
+                        <!--row-->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="page-heading">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="page-title">
+                        <h2>Search History</h2>
+                    </div>
+                </div>
+                <!--col-xs-12-->
+            </div>
+            <!--row-->
+        </div>
+        <!--container-->
+    </div>
+
+
+    <!-- BEGIN Main Container -->
+
+    <div class="main-container col1-layout wow bounceInUp animated animated" style="visibility: visible;">
+
+        <div class="main">
+            <div class="account-login container">
+                <!--page-title-->
+
+                <input name="form_key" type="hidden" value="EPYwQxF6xoWcjLUr">
+                <fieldset class="col2-set">
+                    <div class="col-2 registered-users" style="width: -webkit-fill-available">
+                        <strong>Your Search History</strong>
+                        <div class="content">
+                            <table class="table table-bordered">
+
+                                <thead>
+                                <tr>
+                                    <th>Search Date time</th>
+                                    <th>Location</th>
+                                    <th>Check In</th>
+                                    <th>Checkout</th>
+                                    <th>Min Price</th>
+                                    <th>Max Price</th>
+
+                                </tr>
+                                </thead>
+                                <tbody id="tbody">
+
+                                </tbody>
+                            </table>
+                        </div> <!--content-->
+                    </div> <!--col-2 registered-users-->
+                </fieldset> <!--col2-set-->
+
+            </div> <!--account-login-->
+
+        </div><!--main-container-->
+
+    </div> <!--col1-layout-->
+
+
+    <!-- For version 1,2,3,4,6 -->
+
+    <footer>
+        <!-- BEGIN INFORMATIVE FOOTER -->
+        <div class="footer-inner">
+            <div class="our-features-box wow bounceInUp animated animated">
+                <div class="container">
+                    <ul>
+                        <li>
+                            <div class="feature-box">
+                                <div class="icon-truck"><img src="images/world-icon.png" alt="Image"></div>
+                                <div class="content">
+                                    <h6>World's #1</h6>
+                                    <p>Largest Hotel Hub</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="feature-box">
+                                <div class="icon-money"><img src="images/tag-icon.png" alt="Image"></div>
+                                <div class="content">
+                                    <h6>Offers</h6>
+                                    <p>Stay updated pay less</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="feature-box">
+                                <div class="icon-support"><img src="images/car-sold-icon.png" alt="Image"></div>
+                                <div class="content">
+                                    <h6>Customer Care</h6>
+                                    <p>24/7 Free support</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="last">
+                            <div class="feature-box">
+                                <div class="icon-return"><img src="images/compare-icon.png" alt="Image"></div>
+                                <div class="content">
+                                    <h6>Compare</h6>
+                                    <p>Decode the right hotel</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!--container-->
+        </div>
+        <!--footer-inner-->
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-logo"><img src="images/footer-logo.png" alt="Car Store"></div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="social">
+                            <ul>
+                                <li class="fb"><a href="#"></a></li>
+                                <li class="tw"><a href="#"></a></li>
+                                <li class="googleplus"><a href="#"></a></li>
+                                <li class="rss"><a href="#"></a></li>
+                                <li class="pintrest"><a href="#"></a></li>
+                                <li class="linkedin"><a href="#"></a></li>
+                                <li class="youtube"><a href="#"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-xs-12 coppyright"><a target="_blank" href="#">Global Hotel Hub © 2024 All
+                        Rights Reserved
+                    </a></div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div style="cursor: pointer" class="payment-accept">
+                            <a target="_blank" href="https://www.buymeacoffee.com/reshanmaduU">
+                                <img src="images/payment-1.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- BEGIN SIMPLE FOOTER -->
+    </footer>
+    <!-- End For version 1,2,3,4,6 -->
+
+</div>
+<!--page-->
+<!-- Mobile Menu-->
+<div id="mobile-menu">
+
+</div>
+
+
+<!-- JavaScript -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/parallax.js"></script>
+<script type="text/javascript" src="js/revslider.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-menu.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+
+        let token=Cookies.get('token');
+        let userId=Cookies.get('id');
+
+        window.swal({
+            title: "Loading...",
+            text: "Please wait",
+            imageUrl: "images/loading.gif",
+            showConfirmButton: false,
+            allowOutsideClick: false
+        });
+
+        let ajaxConfig = {
+            method: "GET",
+            url: Server + "/v1/hotels/history?userId="+userId,
+            async: true,
+            crossDomain: true,
+            processData: false,
+            headers: {
+                Authorization: 'Bearer' + ' ' + token,
+                "Content-Type": "application/json",
+            },
+        }
+        $.ajax(ajaxConfig).done(function (response) {
+
+            swal.close();
+
+            if (response.success === true) {
+
+                for (let i = 0; i < response.body.length; i++) {
+
+
+                    var x =" <tr>\n" +
+                        "                                    <td>"+response.body[i].dateTime+" </td>\n" +
+                        "                                    <td>"+response.body[i].location+" </td>\n" +
+                        "                                    <td>"+response.body[i].checkin+" </td>\n" +
+                        "                                    <td>"+response.body[i].checkout+" </td>\n" +
+                        "                                    <td>"+response.body[i].minPrice+" </td>\n" +
+                        "                                    <td>"+response.body[i].maxPrice+" </td>\n" +
+                        "                                </tr>"
+
+
+                    $('#tbody').append(x);
+
+                }
+            }
+
+
+        });
+
+
+    });
+
+    // .......................................................................................
+    /**
+     * logout function
+     */
+    function logout() {
+
+        swal({
+                title: "Are you sure?",
+                text: "you want to logout?",
+                type: "info",
+                showCancelButton: true,
+                confirmButtonColor: "#3498db",
+                confirmButtonText: "Yes",
+                cancelButtonText: "No",
+                closeOnConfirm: true,
+                closeOnCancel: true
+            },
+            function (isConfirm) {
+                if (isConfirm) {
+
+                    window.swal({
+                        title: "Processing...",
+                        text: "Please wait",
+                        imageUrl: "images/loading.gif",
+                        showConfirmButton: false,
+                        allowOutsideClick: false
+                    });
+
+                    Cookies.remove('token');
+                    Cookies.remove('id');
+                    Cookies.remove('fullName');
+                    Cookies.remove('mobileNumber');
+                    Cookies.remove('email');
+
+                    window.location.href = 'login.html';
+                }
+            });
+    }
+
+</script>
+
+<script>
+    function updateCurrentTime() {
+        const currentTimeElement = document.getElementById('current-time');
+        const currentDateElement = document.getElementById('current-date');
+        const currentDate = new Date();
+
+        const formattedDate = `${currentDate.getFullYear()}-${(currentDate.getMonth() + 1).toString().padStart(2, '0')}-${currentDate.getDate().toString().padStart(2, '0')}`;
+
+        const hours = currentDate.getHours().toString().padStart(2, '0');
+        const minutes = currentDate.getMinutes().toString().padStart(2, '0');
+        const seconds = currentDate.getSeconds().toString().padStart(2, '0');
+
+        const formattedTime = `${hours}:${minutes}:${seconds}`;
+        currentTimeElement.textContent = formattedTime;
+
+        currentDateElement.textContent = formattedDate;
+    }
+
+    // Update the current time every second
+    setInterval(updateCurrentTime, 1000);
+
+    // Initial update
+    updateCurrentTime();
+</script>
+
+</body>
+
+</html>
