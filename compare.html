@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Global Hotel Hub | Compare Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Default Description">
+    <meta name="keywords" content="fashion, store, E-commerce">
+    <meta name="robots" content="*">
+    <link rel="icon" href="#" type="image/x-icon">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+
+    <!-- CSS Style -->
+    <link rel="stylesheet" type="text/css" href="stylesheet/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/font-awesome.css" media="all">
+    <link rel="stylesheet" type="text/css" href="stylesheet/bootstrap-select.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/revslider.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/owl.theme.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/jquery.bxslider.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/jquery.mobile-menu.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/style.css" media="all">
+    <link rel="stylesheet" type="text/css" href="stylesheet/responsive.css" media="all">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700,800'
+          rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Teko:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Saira+Condensed:300,400,500,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheet/tooplate-style.css" media="all">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="controller/usercontroller.js"></script>
+    <script src="controller/constant.js"></script>
+
+    <!--    ......................sweet alert........................................-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+
+    <script>
+        window.onload = function () {
+            checktimout();
+        }
+    </script>
+
+</head>
+<body>
+<div id="page">
+    <header>
+        <div class="container">
+            <div class="row">
+                <div id="header">
+                    <div class="header-container">
+                        <div class="header-logo"><a href="index.html" title="Car HTML" class="logo">
+                            <div><img src="images/logo.png" alt="Car Store"></div>
+                        </a></div>
+                        <div class="header__nav">
+                            <div class="header-banner">
+                                <div class="col-lg-6 col-xs-12 col-sm-6 col-md-6">
+                                    <div class="assetBlock">
+                                        <div style="height: 20px; overflow: hidden;" id="slideshow">
+                                            <p style="display: block;">Hot days! - <span>50%</span> Get ready for
+                                                summer! </p>
+                                            <p style="display: none;">Save up to <span>40%</span> Hurry limited offer!
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-lg-6 col-xs-12 col-sm-6 col-md-6 call-us"><i
+                                        class="fa fa-clock-o"></i> <span id="current-date"></span> <span
+                                        id="current-time"></span>
+                                </div>
+                            </div>
+
+                            <div class="fl-nav-menu">
+                                <nav>
+                                    <div class="mm-toggle-wrap">
+                                        <div class="mm-toggle"><i class="fa fa-bars"></i><span
+                                                class="mm-label">Menu</span></div>
+                                    </div>
+                                    <div class="nav-inner">
+                                        <!-- BEGIN NAV -->
+                                        <ul id="nav" class="hidden-xs">
+                                            <li class="active"><a class="level-top" href="index.html"><span>Home</span></a>
+                                            </li>
+                                            <li class="active"><a class="level-top"
+                                                                  href="profile.html"><span>Profile</span></a>
+                                            </li>
+                                            <li class="active"><a class="level-top"
+                                                                  href="history.html"><span>History</span></a>
+                                            </li>
+
+                                            <li class="mega-menu hidden-sm"><a class="level-top"
+                                                                               href="compare.html"><span>Compare Hotels‎</span></a>
+                                            </li>
+                                            <li class="active"><a class="level-top" style="cursor: pointer"
+                                                                  onclick="logout()"><span>Logout</span></a>
+                                            </li>
+                                        </ul>
+                                        <!--nav-->
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+
+                        <!--row-->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="page-heading">
+
+        <div class="page-title">
+            <h2>Compare Hotels</h2>
+        </div>
+
+        <div class="ie-container-width-fix-2">
+            <div class="container tm-bg-white ie-h-align-center-fix filtering-outer">
+                <div class="row">
+                    <div class="col-xs-12 ml-auto mr-auto ie-container-width-fix">
+                        <div class="tm-search-form tm-section-pad-2">
+                            <div class="form-row tm-search-form-row">
+                                <div class="form-group tm-form-element tm-form-element-2">
+                                    <select name="select1" class="form-control tm-select" id="select1" onchange="toggleCompareButton()">
+
+                                    </select>
+                                    <i class="fa fa-2x fa-bed tm-form-element-icon"></i>
+                                </div>
+                                <div class="form-group tm-form-element tm-form-element-2">
+                                    <select name="select2" class="form-control tm-select" id="select2" onchange="toggleCompareButton()">
+
+                                    </select>
+                                    <i class="fa fa-2x fa-bed tm-form-element-icon"></i>
+                                </div>
+                                <div class="form-group tm-form-element tm-form-element-2">
+                                    <select name="select3" class="form-control tm-select" id="select3" onchange="toggleCompareButton()">
+
+                                    </select>
+                                    <i class="fa fa-2x fa-bed tm-form-element-icon"></i>
+                                </div>
+                                <div class="form-group tm-form-element tm-form-element-2">
+                                    <button type="submit" class="btn btn-primary tm-btn-search"
+                                            onclick="compareHotel()" id="compareButton" style="background-color: darkgray; color: white" disabled>Compare
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- BEGIN Main Container -->
+
+    <div class="main-container col1-layout wow bounceInUp animated animated" style="visibility: visible;">
+
+        <div class="main">
+            <div class="container">
+                <div class="b-compare-images">
+                    <div class="row" id="compare-items">
+                    </div>
+                </div>
+                <div class="b-compare-block">
+                    <h2 style="background: #50b2fc;">Basic Information</h2>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="b-compare__block-inside-title">
+                                Address
+                            </div>
+                        </div>
+                        <div id="address-list">
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                <div class="b-compare__block-inside-value" id="ad-1">
+
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                <div class="b-compare__block-inside-value" id="ad-2">
+
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                <div class="b-compare__block-inside-value" id="ad-3">
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="b-compare__block-inside-title">
+                                Price
+                            </div>
+                        </div>
+                        <div id="price-list">
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" >
+                                <div class="b-compare__block-inside-value" id="pr-1">
+
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" >
+                                <div class="b-compare__block-inside-value" id="pr-2">
+
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" >
+                                <div class="b-compare__block-inside-value" id="pr-3">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="b-compare__block-inside-title">
+                                Amenities
+                            </div>
+                        </div>
+
+                        <div id="amenities-list">
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" >
+                                <div class="b-compare__block-inside-value" id="am-1">
+
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" >
+                                <div class="b-compare__block-inside-value" id="am-2">
+
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" >
+                                <div class="b-compare__block-inside-value" id="am-3">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="b-compare__block-inside-title">
+                                Publish Site
+                            </div>
+                        </div>
+                        <div id="publish-list">
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                <div class="b-compare__block-inside-value" id="pb-1">
+
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                <div class="b-compare__block-inside-value" id="pb-2">
+
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                <div class="b-compare__block-inside-value" id="pb-3">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="b-compare__block-inside-title">
+                                Discount Ranges
+                            </div>
+                        </div>
+                        <div id="discount-list">
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                <div class="b-compare__block-inside-value" id="dr-1">
+
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                <div class="b-compare__block-inside-value" id="dr-2">
+
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                <div class="b-compare__block-inside-value" id="dr-3">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="b-compare__block-inside-title">
+                                Options
+                            </div>
+                        </div>
+                        <div id="feat-list">
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                <div class="b-compare__block-inside-value" id="ft-1">
+
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                <div class="b-compare__block-inside-value" id="ft-2">
+
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                <div class="b-compare__block-inside-value" id="ft-3">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="b-compare__block-inside-title">
+                                Rooms
+                            </div>
+                        </div>
+                        <div id="room-list">
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                <div class="b-compare__block-inside-value" id="rm-1">
+
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                <div class="b-compare__block-inside-value" id="rm-2">
+
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                <div class="b-compare__block-inside-value" id="rm-3">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div><!--main-container-->
+
+    </div> <!--col1-layout-->
+
+
+    <!-- For version 1,2,3,4,6 -->
+
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-logo"><img src="images/footer-logo.png" alt="Car Store"></div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="social">
+                            <ul>
+                                <li class="fb"><a href="#"></a></li>
+                                <li class="tw"><a href="#"></a></li>
+                                <li class="googleplus"><a href="#"></a></li>
+                                <li class="rss"><a href="#"></a></li>
+                                <li class="pintrest"><a href="#"></a></li>
+                                <li class="linkedin"><a href="#"></a></li>
+                                <li class="youtube"><a href="#"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-xs-12 coppyright"><a target="_blank" href="#">Global Hotel Hub © 2024 All
+                        Rights Reserved</a></div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div style="cursor: pointer" class="payment-accept">
+                            <a target="_blank" href="https://www.buymeacoffee.com/reshanmaduU">
+                                <img src="images/payment-1.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- BEGIN SIMPLE FOOTER -->
+    </footer>
+    <!-- End For version 1,2,3,4,6 -->
+
+</div>
+<!--page-->
+<!-- Mobile Menu-->
+
+<!-- JavaScript -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-slider.min.js"></script>
+<script src="js/bootstrap-select.min.js"></script>
+<script type="text/javascript" src="js/parallax.js"></script>
+<script type="text/javascript" src="js/revslider.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-menu.min.js"></script>
+<script src="js/countdown.js"></script>
+<script>
+    jQuery(document).ready(function () {
+        jQuery('#rev_slider_4').show().revolution({
+            dottedOverlay: 'none',
+            delay: 5000,
+            startwidth: 1170,
+            startheight: 650,
+
+            hideThumbs: 200,
+            thumbWidth: 200,
+            thumbHeight: 50,
+            thumbAmount: 2,
+
+            navigationType: 'thumb',
+            navigationArrows: 'solo',
+            navigationStyle: 'round',
+
+            touchenabled: 'on',
+            onHoverStop: 'on',
+
+            swipe_velocity: 0.7,
+            swipe_min_touches: 1,
+            swipe_max_touches: 1,
+            drag_block_vertical: false,
+
+            spinner: 'spinner0',
+            keyboardNavigation: 'off',
+
+            navigationHAlign: 'center',
+            navigationVAlign: 'bottom',
+            navigationHOffset: 0,
+            navigationVOffset: 20,
+
+            soloArrowLeftHalign: 'left',
+            soloArrowLeftValign: 'center',
+            soloArrowLeftHOffset: 20,
+            soloArrowLeftVOffset: 0,
+
+            soloArrowRightHalign: 'right',
+            soloArrowRightValign: 'center',
+            soloArrowRightHOffset: 20,
+            soloArrowRightVOffset: 0,
+
+            shadow: 0,
+            fullWidth: 'on',
+            fullScreen: 'off',
+
+            stopLoop: 'off',
+            stopAfterLoops: -1,
+            stopAtSlide: -1,
+
+            shuffle: 'off',
+
+            autoHeight: 'off',
+            forceFullWidth: 'on',
+            fullScreenAlignForce: 'off',
+            minFullScreenHeight: 0,
+            hideNavDelayOnMobile: 1500,
+
+            hideThumbsOnMobile: 'off',
+            hideBulletsOnMobile: 'off',
+            hideArrowsOnMobile: 'off',
+            hideThumbsUnderResolution: 0,
+
+            hideSliderAtLimit: 0,
+            hideCaptionAtLimit: 0,
+            hideAllCaptionAtLilmit: 0,
+            startWithSlide: 0,
+            fullScreenOffsetContainer: ''
+        });
+    });
+</script>
+<script type="text/javascript">
+    function HideMe() {
+        jQuery('.popup1').hide();
+        jQuery('#fade').hide();
+    }
+</script>
+
+<script>
+    // .......................................................................................
+    /**
+     * logout function
+     */
+    function logout() {
+
+        swal({
+                title: "Are you sure?",
+                text: "you want to logout?",
+                type: "info",
+                showCancelButton: true,
+                confirmButtonColor: "#3498db",
+                confirmButtonText: "Yes",
+                cancelButtonText: "No",
+                closeOnConfirm: true,
+                closeOnCancel: true
+            },
+            function (isConfirm) {
+                if (isConfirm) {
+
+                    window.swal({
+                        title: "Processing...",
+                        text: "Please wait",
+                        imageUrl: "images/loading.gif",
+                        showConfirmButton: false,
+                        allowOutsideClick: false
+                    });
+
+                    Cookies.remove('token');
+                    Cookies.remove('id');
+                    Cookies.remove('fullName');
+                    Cookies.remove('mobileNumber');
+                    Cookies.remove('email');
+
+                    window.location.href = 'login.html';
+                }
+            });
+    }
+
+</script>
+
+<script>
+    function updateCurrentTime() {
+        const currentTimeElement = document.getElementById('current-time');
+        const currentDateElement = document.getElementById('current-date');
+        const currentDate = new Date();
+
+        const formattedDate = `${currentDate.getFullYear()}-${(currentDate.getMonth() + 1).toString().padStart(2, '0')}-${currentDate.getDate().toString().padStart(2, '0')}`;
+
+        const hours = currentDate.getHours().toString().padStart(2, '0');
+        const minutes = currentDate.getMinutes().toString().padStart(2, '0');
+        const seconds = currentDate.getSeconds().toString().padStart(2, '0');
+
+        const formattedTime = `${hours}:${minutes}:${seconds}`;
+        currentTimeElement.textContent = formattedTime;
+
+        currentDateElement.textContent = formattedDate;
+    }
+
+    // Update the current time every second
+    setInterval(updateCurrentTime, 1000);
+
+    // Initial update
+    updateCurrentTime();
+</script>
+
+<script>
+    // Function to fetch and load JSON data into dropdowns
+    async function loadDropdownOptions() {
+        try {
+            const response = await fetch('json/data.json'); // Provide the correct path to your JSON file
+            const jsonData = await response.json();
+
+            // Get references to the dropdowns
+            const select1 = document.getElementById('select1');
+            const select2 = document.getElementById('select2');
+            const select3 = document.getElementById('select3');
+
+            // Clear existing options
+            select1.innerHTML = '<option value="">Hotel Selection 01</option>';
+            select2.innerHTML = '<option value="">Hotel Selection 02</option>';
+            select3.innerHTML = '<option value="">Hotel Selection 03</option>';
+
+            // Loop through the JSON data and populate the dropdown options
+            jsonData.body.forEach(item => {
+                const option1 = new Option(item.title, item.id);
+                const option2 = new Option(item.title, item.id);
+                const option3 = new Option(item.title, item.id);
+
+                select1.add(option1);
+                select2.add(option2);
+                select3.add(option3);
+            });
+        } catch (error) {
+            console.error('Error loading JSON data:', error);
+        }
+    }
+
+    // Call the function to load options when the page loads
+    loadDropdownOptions();
+
+    // You can add an event listener for the 'Compare' button as needed
+    async function compareHotel() {
+
+        const response = await fetch('json/data.json'); // Provide the correct path to your JSON file
+
+        const clonedResponse = response.clone(); // Clone the response before consuming it
+        const jsonData = await clonedResponse.json();
+
+        const selectedOption1 = document.getElementById('select1').value;
+        const selectedOption2 = document.getElementById('select2').value;
+        const selectedOption3 = document.getElementById('select3').value;
+
+        console.log(jsonData)
+
+        const filteredResults = jsonData.body.find(item => {
+            return (item.id.toString() === selectedOption1);
+        });
+
+        const filteredResults2 = jsonData.body.find(item => {
+            return (item.id.toString() === selectedOption2);
+        });
+
+        const filteredResults3 = jsonData.body.find(item => {
+            return (item.id.toString() === selectedOption3);
+        });
+
+        const compareContainer = document.getElementById('compare-items');
+        compareContainer.innerHTML = '';
+
+        const card = document.createElement('div');
+        card.classList.add('col-md-3', 'col-sm-4', 'col-xs-12', 'col-md-offset-3');
+
+        card.innerHTML = `
+        <div>
+          <h3>${filteredResults.title}</h3>
+          <img src="${filteredResults.image}" alt="Car Image">
+          <div class="b-compare-price"><div class="b-compare__images-item-price-vs">vs</div> ${filteredResults.price}</div>
+        </div>
+      `;
+
+        const card2 = document.createElement('div');
+        card2.classList.add('col-md-3', 'col-sm-4', 'col-xs-12');
+
+        card2.innerHTML = `
+        <div>
+          <h3>${filteredResults2.title}</h3>
+          <img src="${filteredResults2.image}" alt="Car Image">
+          <div class="b-compare-price"><div class="b-compare__images-item-price-vs">vs</div> ${filteredResults2.price}</div>
+        </div>
+      `;
+
+        const card3 = document.createElement('div');
+        card3.classList.add('col-md-3', 'col-sm-4', 'col-xs-12');
+
+        card3.innerHTML = `
+        <div>
+          <h3>${filteredResults3.title}</h3>
+          <img src="${filteredResults3.image}" alt="Car Image">
+          <div class="b-compare-price">${filteredResults3.price}</div>
+        </div>
+      `;
+
+        compareContainer.appendChild(card);
+        compareContainer.appendChild(card2);
+        compareContainer.appendChild(card3);
+
+
+
+
+        document.getElementById('ad-1').innerHTML  = filteredResults.address;
+        document.getElementById('ad-2').innerHTML  = filteredResults2.address;
+        document.getElementById('ad-3').innerHTML  = filteredResults3.address;
+
+        document.getElementById('pr-1').innerHTML  = filteredResults.price;
+        document.getElementById('pr-2').innerHTML  = filteredResults2.price;
+        document.getElementById('pr-3').innerHTML  = filteredResults3.price;
+
+        document.getElementById('am-1').innerHTML  = filteredResults.amenities;
+        document.getElementById('am-2').innerHTML  = filteredResults2.amenities;
+        document.getElementById('am-3').innerHTML  = filteredResults3.amenities;
+
+        document.getElementById('pb-1').innerHTML  = filteredResults.publishSite;
+        document.getElementById('pb-2').innerHTML  = filteredResults2.publishSite;
+        document.getElementById('pb-3').innerHTML  = filteredResults3.publishSite;
+
+        document.getElementById('dr-1').innerHTML  = filteredResults.discount_ranges;
+        document.getElementById('dr-2').innerHTML  = filteredResults2.discount_ranges;
+        document.getElementById('dr-3').innerHTML  = filteredResults3.discount_ranges;
+
+        document.getElementById('rm-1').innerHTML  = filteredResults.rooms_count;
+        document.getElementById('rm-2').innerHTML  = filteredResults2.rooms_count;
+        document.getElementById('rm-3').innerHTML  = filteredResults3.rooms_count;
+
+
+        document.getElementById('ft-1').innerHTML  = filteredResults.sample_options;
+        document.getElementById('ft-2').innerHTML  = filteredResults2.sample_options;
+        document.getElementById('ft-3').innerHTML  = filteredResults3.sample_options;
+    }
+
+    function toggleCompareButton() {
+        // Get references to the selection elements
+        const select1 = document.getElementById('select1');
+        const select2 = document.getElementById('select2');
+        const select3 = document.getElementById('select3');
+
+        // Get reference to the compare button
+        const compareButton = document.getElementById('compareButton');
+
+        // Check if all three selections have been made
+        if (select1.value && select2.value && select3.value) {
+            // Show the compare button
+            compareButton.style.backgroundColor = '#ee5057';
+            compareButton.disabled = false;
+        } else {
+            // Hide the compare button
+            compareButton.style.backgroundColor = 'darkGray';
+            compareButton.disabled = true;
+        }
+    }
+
+</script>
+
+</body>
+
+</html>

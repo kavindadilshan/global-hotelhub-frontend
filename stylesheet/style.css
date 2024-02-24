@@ -3416,12 +3416,14 @@ ul.pdt-list li.item a img.image-hover {
 	-webkit-transform: scale(1.2);
 	transform: scale(1.2);
 	-moz-transform: scale(1.2);
+	border-radius: 15px;
 }
 .products-grid .item .item-inner .item-img img {
 	-webkit-transition-duration: 500ms;
 	transition-duration: 500ms;
 	-webkit-transition-property: transform;
 	transition-property: transform;
+	border-radius: 15px;
 
 }
 .products-grid .item .item-inner .item-img .item-img-info a.product-image:before {
@@ -3664,11 +3666,17 @@ margin: 0 0;
 
 /* other */
 .other-info { border-top:1px #eaeaea solid; color:#777; padding-top:20px; margin-top:15px; font-family: 'Saira Condensed', sans-serif; font-size:15px; letter-spacing:0.5px}
-.other-info i {display:block; margin-bottom:5px; color:#ccc}
-.col-km {float:left; width:33.3%;}
-.col-engine {float:left; width:33.3%}
-.col-date {float:left; width:33.3%; font-size:14px}
+.other-info i {display:block;  color:#ccc}
+.col-km {float:left;margin-left: 10px; text-align: left}
+.col-engine {float:left; align-self: start}
+.col-date {float:left; font-size:14px}
 
+.row-container {
+	display: flex;
+	/*align-items: center; !* Align items vertically in the center *!*/
+	flex-direction: row;
+	margin-bottom: 10px;
+}
 
 /* Price */
 .price {
@@ -3679,7 +3687,7 @@ margin: 0 0;
 }
 .price-box {
 	margin: 0;
-	padding: 18px 0px 10px 0px;
+	padding: 5px 0px 0px 0px;
 
 }
 /* Regular price */
@@ -4447,6 +4455,7 @@ text-transform: uppercase
 	transition: all 0.3s ease-out;
 	position: relative;
 	overflow: hidden;
+	border-radius: 15px;
 }
 #best-seller .owl-item .item .item-inner .item-img .item-img-info a.product-image {
 	display: block;
@@ -9835,8 +9844,8 @@ button.button.submit:before {
     top: 50%;
     margin-top: -25px;
     z-index: 100;
-	background: #d9eb3d;
-	color:#121212;
+	background: #08acd1;
+	color:white;
 	text-align:center
 }
 .b-compare-images h3 {
