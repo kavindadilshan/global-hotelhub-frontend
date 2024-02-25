@@ -885,8 +885,8 @@
             data: JSON.stringify({
                 "userId": userId,
                 "location": location,
-                "checkin": checkin.toString(),
-                "checkout": checkout.toString(),
+                "checkin": (new Date(checkin).toISOString().split('T')[0]).toString(),
+                "checkout": (new Date(checkout).toISOString().split('T')[0]).toString(),
                 "adults": adult.toString(),
                 "child": child.toString(),
                 "room": room.toString(),
@@ -1041,12 +1041,12 @@
     // Get today's date
     const today = new Date();
     today.setDate(today.getDate() + 1);
-    const formattedToday = today.toISOString().split('T')[0]; // Format: YYYY-MM-DD
+    const formattedToday = today.toDateString(); // Format: YYYY-MM-DD
 
     // Get the date 7 days later
     const sevenDaysLater = new Date();
     sevenDaysLater.setDate(today.getDate() + 7);
-    const formattedSevenDaysLater = sevenDaysLater.toISOString().split('T')[0]; // Format: YYYY-MM-DD
+    const formattedSevenDaysLater = sevenDaysLater.toDateString(); // Format: YYYY-MM-DD
 
     // Set initial values for check-in and check-out fields
     document.getElementById('inputCheckIn').value = formattedToday;

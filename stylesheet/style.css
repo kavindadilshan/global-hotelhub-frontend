@@ -48,7 +48,6 @@ small {
 }
 
 *::selection {
-  background-color: #d9eb3d;
   color:#121212
 }
 a:focus{outline:none}
@@ -899,7 +898,7 @@ background-color: #fff;
     height: 8px;
     transform: skew(-35deg) translate(-50%, 0);
     transition: bottom .4s ease-in-out 0s, width .4s ease-in-out 0s;
-	 background-color: #d9eb3d;
+	 background-color: dodgerblue;
 }
 
 .cms-index-index #nav #nav-home > a, #nav > li.active > a, .vertnav-top li.current > a {
@@ -3424,6 +3423,9 @@ ul.pdt-list li.item a img.image-hover {
 	-webkit-transition-property: transform;
 	transition-property: transform;
 	border-radius: 15px;
+	height: 280px;
+	border-radius: 15px;
+	object-fit: cover;
 
 }
 .products-grid .item .item-inner .item-img .item-img-info a.product-image:before {
@@ -7675,7 +7677,7 @@ ol#compare-items li:last-child {
 	z-index: 2;
 	color: #121212;
 	cursor: default;
-	background-color: #d9eb3d;
+	background-color: deepskyblue;
 	border-color: #d9eb3d;
 	border-radius: 0px;
 	border-width: 1px;
@@ -7906,11 +7908,10 @@ ol#compare-items li:last-child {
 }
 .toolbar span.button-active.button-grid {
 	background: url(../images/icon_grid_over.png) no-repeat 10px 9px;
-	background-color: #d9eb3d;
 	color: #121212;
 	padding: 6px 12px 7px 22px;
 	margin-right: 5px;
-	border: 1px #d9eb3d solid;
+	border: 1px solid;
 	border-radius: 0px;
 	font-size:0px;
 	height:34px;
@@ -7921,10 +7922,9 @@ ol#compare-items li:last-child {
 }
 .toolbar span.button-active.button-list {
 	background: url(../images/icon_list.png) no-repeat 12px 8px;
-	background-color: #d9eb3d;
 	color: #fff;
 	padding: 6px 12px 7px 22px;
-	border: 1px #d9eb3d solid;
+	border: 1px  solid;
 	border-radius: 0px;
 	height:34px;
 	line-height:34px;
@@ -9263,7 +9263,7 @@ ul.shipping-pro li {
     height: 8px;
     transform: skew(-35deg) translate(-50%, 0);
     transition: bottom .4s ease-in-out 0s, width .4s ease-in-out 0s;
-    background-color: #d9eb3d;
+    background-color: deepskyblue;
 }
 
 
